@@ -1,4 +1,4 @@
-import { HealthAndSafety } from "@src/models/HealthandSafety";
+import { HealthAndSafety } from "@src/models/HealthAndSafety";
 import { HSEStats } from "@src/models/HSEStats";
 import { NewsArticle } from "@src/models/NewsArticle";
 import { Process } from "@src/models/Process";

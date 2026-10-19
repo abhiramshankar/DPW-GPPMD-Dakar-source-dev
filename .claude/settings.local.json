@@ -11,7 +11,11 @@
       "Bash(xargs sed -i 's/from.*HealthAndSafety/from \"@src\\\\/models\\\\/HealthandSafety/g; s/HealthAndSafety\\\\/HealthAndSafety/HealthandSafety\\\\/HealthandSafety/g')",
       "Bash(git add *)",
       "Bash(git commit -m 'Fix: Correct import quote syntax and file paths *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(git mv *)",
+      "Bash(git rm *)",
+      "Bash(git restore *)",
+      "Bash(git commit -m 'Fix: Correct all import paths and SCSS references for HealthAndSafety *)"
     ]
   }
 }
