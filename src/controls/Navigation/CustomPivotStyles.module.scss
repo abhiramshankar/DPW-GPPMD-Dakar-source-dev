@@ -1,0 +1,46 @@
+.pivotControl {
+    margin-top: -4px;
+    div[role="tablist"] {
+      border: 0px solid var(--themeTertiary, #7f7f7f); /* Using the theme tertiary color as fallback */
+      border-radius: 12px;
+      padding: 1px;
+    }
+    button {
+      height: 75px; /* Set height to 75px */
+      width: 175px; /* Set width to 175px */
+      padding: 2px 8px;
+      cursor: pointer;
+      text-align: center;
+      border-radius: 6px;
+      background-clip: padding-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      border: 1px solid transparent !important;
+      font-size: 16px;
+      margin-right: 0px;
+      align-items: center; /* Center items vertically */
+      justify-content: center; /* Center items horizontally */
+      white-space: normal; /* Allow text to wrap */
+      &:hover {
+        background-color: var(--themeLighterAlt, lightgrey); /* Using theme lighter alt color as fallback */
+        border-color: var(--themeLighterAlt, lightgrey);
+      }
+      &[aria-selected="true"] {
+        background-color: var(--themePrimary, #1E1450); /* Using theme primary color as fallback */
+        border-color: var(--themePrimary, #1E1450);
+        color: var(--white, #F5F3F5);
+        fill: var(--white, #F5F3F5);
+        &:hover {
+          background-color: var(--themePrimary, #1E1450); /* Ensuring the color stays the same on hover */
+          border-color: var(--themePrimary, #1E1450);
+        }
+      }
+      span {
+        //display: block;
+        text-align: center; /* Center text inside the span */
+        word-wrap: break-word; /* Ensure text wraps */
+        line-height: 1.2;
+      }
+    }
+  }
+  

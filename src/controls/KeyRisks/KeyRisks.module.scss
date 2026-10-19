@@ -1,0 +1,60 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.riskList {
+    display: flex;               /* Make UL a flex container */
+    flex-direction: column;      /* Stack items vertically */
+    flex: 1;                     /* Fill available height */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.listItem {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push .item and .divider apart */
+}
+
+.listItemContent {
+    display: flex;
+    align-items: center;   /* Center text vertically */
+    justify-content: flex-start; /* Optional, aligns text left */
+    padding: 0 13px;
+    font-size: 16px;
+    font-weight: 500;
+    height: 100%; /* Fill parent space so align-items works */
+    letter-spacing: 0.06rem;
+}
+
+
+.divider {
+    border: 0;
+    border-top: 1px solid #e1e4e8;
+    width: 90%;
+    border-color: #94949470;
+    margin-bottom: 0;
+    margin-top: 0;
+    align-self: center; /* Center the divider */
+}
+.fadeIn {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.hidden {
+  opacity: 0;
+}
+.spinnerWrapper {
+  align-self: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; // Take full height of parent
+}

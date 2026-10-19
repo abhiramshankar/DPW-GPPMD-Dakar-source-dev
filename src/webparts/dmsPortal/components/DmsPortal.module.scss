@@ -1,0 +1,43 @@
+@import "~@fluentui/react/dist/sass/References.scss";
+
+.dmsPortal {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+  margin-bottom: 30px;
+}
+
+.spacer {
+  height: 30px;
+}
+
+.link {
+  color: "[theme:link, default: #0078d4]";
+  color: var(--link);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.version {
+  width: 100%;
+  text-align: center;
+  color: black;
+  opacity: 0.6;
+  font-size: 0.8rem;
+  margin: 20px 0;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

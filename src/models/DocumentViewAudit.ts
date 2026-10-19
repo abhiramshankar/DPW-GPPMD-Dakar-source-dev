@@ -1,0 +1,21 @@
+export type DocumentViewAudit = {
+  id: number;
+  document_id: string;
+  document_name: string;
+  document_url: string;
+  document_revision_number: number;
+  activated_date: Date;
+  view_date: Date;
+  user_display_name: string;
+  user_upn: string;
+  user_id: string;
+  document_view_audit_status_id: number;
+  document_view_audit_status: string;
+  site_name: string;
+  site_url: string;
+  region: string;
+  department: string;
+  type: string;
+  customer: string;
+  published_date: Date;
+};

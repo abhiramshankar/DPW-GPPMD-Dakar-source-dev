@@ -1,0 +1,65 @@
+.masterPanel {
+  display: flex;
+  flex-direction: column; // Stack header and content vertically
+  gap: 0.625rem;
+  flex-wrap: nowrap; // Prevent wrapping
+  margin: 0 auto;
+  height: 260px;
+  width: 260px;
+}
+
+.summaryCard {
+  min-width: 9.375rem;
+  border: solid 1px black;
+  padding: 0.625rem;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.625rem;
+  align-items: center;
+  //justify-content: center;
+  text-align: center;
+}
+
+.summaryCard:hover {
+  border-color: "[theme: themePrimary, default: #0078d4]";
+  background-color: "[theme: themePrimary, default: #0078d4]";
+  cursor: pointer;
+  color: white;
+}
+
+.statNumber {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.header{
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: black;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 1; // Take remaining space, but not more
+  //background-color: #322B67;
+  color: white;
+  /* Gradient background */
+  background: radial-gradient(
+      circle at 60% 40%,      /* position of the light spot */
+      rgba(255, 255, 255, 0.1),  /* subtle white highlight */
+      rgba(0, 0, 0, 0.2) 60%   /* fade to dark */
+    ),
+    linear-gradient(
+      to bottom right,
+      var(--Color-Background1),
+      var(--Color-Background)
+    );
+
+  /* Optional: smooth out the gradient transitions */
+  background-blend-mode: screen;
+}

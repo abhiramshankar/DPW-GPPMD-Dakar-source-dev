@@ -1,0 +1,20 @@
+declare interface IDmsPortalWebPartStrings {
+  PropertyPaneDescription: string;
+  BasicGroupName: string;
+  livestreamURLTextLabel: string;
+  livestreamImageURLTextLabel: string;
+  AppLocalEnvironmentSharePoint: string;
+  AppLocalEnvironmentTeams: string;
+  AppLocalEnvironmentOffice: string;
+  AppLocalEnvironmentOutlook: string;
+  AppSharePointEnvironment: string;
+  AppTeamsTabEnvironment: string;
+  AppOfficeEnvironment: string;
+  AppOutlookEnvironment: string;
+  UnknownEnvironment: string;
+}
+
+declare module "DmsPortalWebPartStrings" {
+  const strings: IDmsPortalWebPartStrings;
+  export = strings;
+}

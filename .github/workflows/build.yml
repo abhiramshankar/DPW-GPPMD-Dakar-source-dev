@@ -1,0 +1,45 @@
+name: Build SPFx Dashboard Package
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    strategy:
+      matrix:
+        node-version: [18.17.1]
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build
+      run: npm run build
+
+    - name: Package solution
+      run: gulp package-solution
+
+    - name: Upload .sppkg artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: DPW-Dashboard.sppkg
+        path: solution/DPW-Dashboard.sppkg
+        retention-days: 30
+
+    - name: Display build output
+      run: |
+        Write-Host "=== Build Complete ==="
+        Write-Host "Package created at: solution/DPW-Dashboard.sppkg"
+        Get-Item solution/*.sppkg | Format-Table Name, Length

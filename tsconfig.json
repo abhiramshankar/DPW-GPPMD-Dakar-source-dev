@@ -1,0 +1,33 @@
+{
+  "extends": "./node_modules/@microsoft/rush-stack-compiler-4.7/includes/tsconfig-web.json",
+  "compilerOptions": {
+    "target": "es5",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "declaration": true,
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "outDir": "lib",
+    "inlineSources": false,
+    "noImplicitAny": true,
+    "noUnusedLocals": false,
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["src/*"],
+      "@dmsPortal/*": ["src/webparts/dmsPortal/*"]
+    },
+
+    "typeRoots": ["./node_modules/@types", "./node_modules/@microsoft"],
+    "types": ["node", "webpack-env"],
+    "lib": ["es5", "dom", "es2015.collection", "es2015.promise"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": [
+    "build-info.json"
+  ]
+}

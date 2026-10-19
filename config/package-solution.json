@@ -1,0 +1,41 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "DPW-GPPMD-Dakar-Dashboard",
+    "id": "8aefe7c9-b9e6-46de-a631-bc3c98515460",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "webApiPermissionRequests": [],
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "GPPMD Project Dashboard"
+      },
+      "longDescription": {
+        "default": "A dashboard to display user selected project facts, made by Brave and Heart."
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "GPPMD Project Dashboard Feature",
+        "description": "The feature that activates elements of the GPPMD Project Dashboard solution.",
+        "id": "51ed0091-e122-4276-8580-a91026a09a82",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/DPW-Dashboard.sppkg"
+  }
+}

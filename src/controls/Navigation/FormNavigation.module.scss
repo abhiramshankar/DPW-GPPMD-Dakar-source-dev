@@ -1,0 +1,65 @@
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.formPivot {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 4.375rem;
+  margin-bottom: 1.875rem;
+}
+
+.formPivotItemGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.125rem;
+  transition: all 0.5s;
+}
+
+.formPivotItemGroup:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.formPivotItem {
+  display: block;
+  height: 1.875rem;
+  width: 1.875rem;
+  line-height: 1.875rem;
+  text-align: center;
+  border-radius: 9999px;
+  background-color: "[theme: neutralLight, default: #edebe9]";
+  color: white;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.formPivotItemBgBar {
+  content: "";
+  position: absolute;
+  top: 0.9375rem;
+  left: -4.375rem;
+  width: 4.375rem;
+  height: 0.125rem;
+  background-color: "[theme: neutralLight, default: #edebe9]";
+  transition: all 0.25s;
+}
+
+.formPivotItemText {
+  position: absolute;
+  margin-top: 1.875rem;
+  opacity: 0.6;
+  transition: all 0.5s;
+}
+
+.formPivotItemReached {
+  background-color: "[theme: themePrimary, default: #0078d4]";
+}
+
+.formPivotItemTextReached {
+  opacity: 1;
+}

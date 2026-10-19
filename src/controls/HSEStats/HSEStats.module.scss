@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.hseStatsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.details {
+    padding-top: 0px;
+    font-size: 12px;
+    text-align: left;
+    padding-left: 13px;
+    color: rgb(216, 216, 216);
+    //font-weight: 500;
+}
+
+.value {
+    //padding: 12px 0;
+    font-size: 16px;
+    text-align: left;
+    padding-left: 13px;
+    font-weight: 500;
+    letter-spacing: 0.06rem;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid #e1e4e8;
+    width: 90%;
+    border-color: #94949470;
+}
+.fadeIn {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.hidden {
+  opacity: 0;
+}

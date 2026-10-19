@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+      /* Gradient background */
+  background: radial-gradient(
+      circle at 60% 40%,      /* position of the light spot */
+      rgba(255, 255, 255, 0.1),  /* subtle white highlight */
+      rgba(0, 0, 0, 0.2) 60%   /* fade to dark */
+    ),
+    linear-gradient(
+      to bottom right,
+      #42429e,
+      #14142b
+    );
+
+  /* Optional: smooth out the gradient transitions */
+  background-blend-mode: screen;
+}
+
+.details {
+    padding-top: 0px;
+    font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Arial, 'sans-serif'; // SP standard font
+    font-size: 12px;
+    color: rgb(216, 216, 216);
+    text-align: center;
+}
+
+.value {
+    //padding: 12px 0;
+    font-family: 'Segoe UI', SegoeUI, 'Helvetica Neue', Arial, 'sans-serif'; // SP standard font
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+    color: #fff
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid #e1e4e8;
+    width: 90%;
+    border-color: #94949470;
+}
+.fadeIn {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.hidden {
+  opacity: 0;
+}
