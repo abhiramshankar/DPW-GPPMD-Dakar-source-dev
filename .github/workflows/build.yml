@@ -25,6 +25,10 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: Clean previous build
+      run: npx gulp clean
+      continue-on-error: true
+
     - name: Build
       run: npm run build
 
@@ -76,4 +80,26 @@ jobs:
           Get-Item solution/*.sppkg | Format-Table Name, Length
         } else {
           Write-Host "Warning: .sppkg file not found at solution/"
+        }
+
+    - name: Validate artifact was created
+      run: |
+        if (Test-Path solution/DPW-Dashboard.sppkg) {
+          Write-Host "✓ SUCCESS: .sppkg artifact created"
+          Exit 0
+        } else {
+          Write-Host "✗ FAILED: .sppkg artifact was not created"
+          Write-Host "Build output:"
+          if (Test-Path solution) {
+            Get-ChildItem solution -Recurse | Format-Table FullName
+          } else {
+            Write-Host "solution/ directory does not exist"
+          }
+          if (Test-Path lib) {
+            Write-Host "lib/ directory exists"
+            Get-ChildItem lib -Recurse | Measure-Object | Select-Object Count
+          } else {
+            Write-Host "lib/ directory does not exist"
+          }
+          Exit 1
         }
