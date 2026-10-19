@@ -95,7 +95,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: DPW-Dashboard.sppkg
-        path: solution/DPW-Dashboard.sppkg
+        path: sharepoint/solution/DPW-Dashboard.sppkg
         retention-days: 30
 
     - name: Display build output
@@ -110,22 +110,13 @@ jobs:
 
     - name: Validate artifact was created
       run: |
-        if (Test-Path solution/DPW-Dashboard.sppkg) {
-          Write-Host "✓ SUCCESS: .sppkg artifact created"
+        if (Test-Path sharepoint/solution/DPW-Dashboard.sppkg) {
+          Write-Host "✓ SUCCESS: .sppkg artifact created at sharepoint/solution/DPW-Dashboard.sppkg"
+          Get-Item sharepoint/solution/DPW-Dashboard.sppkg | Format-Table Name, Length
           Exit 0
         } else {
-          Write-Host "✗ FAILED: .sppkg artifact was not created"
-          Write-Host "Build output:"
-          if (Test-Path solution) {
-            Get-ChildItem solution -Recurse | Format-Table FullName
-          } else {
-            Write-Host "solution/ directory does not exist"
-          }
-          if (Test-Path lib) {
-            Write-Host "lib/ directory exists"
-            Get-ChildItem lib -Recurse | Measure-Object | Select-Object Count
-          } else {
-            Write-Host "lib/ directory does not exist"
-          }
+          Write-Host "✗ FAILED: .sppkg artifact was not created at sharepoint/solution/DPW-Dashboard.sppkg"
+          Write-Host "Searching for .sppkg files:"
+          Get-ChildItem -Recurse -Filter "*.sppkg" -ErrorAction SilentlyContinue | Format-Table FullName
           Exit 1
         }
