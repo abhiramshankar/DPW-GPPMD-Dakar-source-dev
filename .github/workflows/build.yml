@@ -32,7 +32,7 @@ jobs:
       run: gulp package-solution
 
     - name: Upload .sppkg artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: DPW-Dashboard.sppkg
         path: solution/DPW-Dashboard.sppkg
