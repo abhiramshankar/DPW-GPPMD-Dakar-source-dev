@@ -42,4 +42,8 @@ jobs:
       run: |
         Write-Host "=== Build Complete ==="
         Write-Host "Package created at: solution/DPW-Dashboard.sppkg"
-        Get-Item solution/*.sppkg | Format-Table Name, Length
+        if (Test-Path solution/*.sppkg) {
+          Get-Item solution/*.sppkg | Format-Table Name, Length
+        } else {
+          Write-Host "Warning: .sppkg file not found at solution/"
+        }
