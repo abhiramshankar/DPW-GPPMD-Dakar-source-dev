@@ -11,7 +11,7 @@ import WebcamPane from '@src/controls/Showcase - Webcam/ShowcaseWebcam';
 import ProcessPane from '../Process/Process';
 import EnvironmentalPane from '../Environmental/Environmental';
 import QualityPane from '../Quality/Quality';
-import HealthAndSafetyPane from "@src/models/HealthandSafety';
+import HealthandSafetyPane from '../HealthandSafety/HealthandSafety';
 
 interface IMasterPanelProps {
   panelType: string;
@@ -68,7 +68,7 @@ const MasterPanel: React.FC<IMasterPanelProps> = ({
             case "Quality":
               return <QualityPane />
             case "HealthAndSafety":
-              return <HealthAndSafetyPane />
+              return <HealthandSafetyPane />
             case "Process":
               return <ProcessPane />
             default:
