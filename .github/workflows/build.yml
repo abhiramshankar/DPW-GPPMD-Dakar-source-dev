@@ -28,14 +28,34 @@ jobs:
     - name: Build
       run: npm run build
 
+    - name: Run gulp bundle directly
+      run: npx gulp bundle
+
     - name: Check build output
       run: |
-        Write-Host "Checking for lib/ directory..."
+        Write-Host "=== Checking lib/ directory ==="
         if (Test-Path lib) {
-          Write-Host "lib/ directory exists"
-          Get-ChildItem lib -Recurse | Select-Object -First 20 | Format-Table Name, FullName
+          Write-Host "✓ lib/ directory exists"
+          Write-Host "Contents:"
+          Get-ChildItem lib -Recurse | Select-Object -First 30 | Format-Table Name
         } else {
-          Write-Host "ERROR: lib/ directory not found - build may have failed"
+          Write-Host "✗ ERROR: lib/ directory not found - build may have failed"
+          Write-Host "Current directory contents:"
+          Get-ChildItem -Recurse | Select-Object -First 50 | Format-Table FullName
+        }
+
+    - name: Run gulp package-solution directly
+      run: npx gulp package-solution --verbose
+
+    - name: Check solution output
+      run: |
+        Write-Host "=== Checking solution/ directory ==="
+        if (Test-Path solution) {
+          Write-Host "✓ solution/ directory exists"
+          Write-Host "Contents:"
+          Get-ChildItem solution -Recurse | Format-Table FullName
+        } else {
+          Write-Host "✗ ERROR: solution/ directory not found"
         }
 
     - name: Package solution
