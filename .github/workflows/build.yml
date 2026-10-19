@@ -39,7 +39,7 @@ jobs:
         }
 
     - name: Package solution
-      run: gulp package-solution
+      run: npx gulp package-solution
 
     - name: Upload .sppkg artifact
       uses: actions/upload-artifact@v4
