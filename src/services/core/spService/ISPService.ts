@@ -1,4 +1,4 @@
-import { HealthAndSafety } from "@src/models/HealthAndSafety";
+import { HealthAndSafety } from "@src/models/HealthandSafety";
 import { HSEStats } from "@src/models/HSEStats";
 import { NewsArticle } from "@src/models/NewsArticle";
 import { Process } from "@src/models/Process";
@@ -24,3 +24,4 @@ export interface ISPService {
   getLiveStreamImageDateTimeFromPhotoSentinel(): Promise<Date | undefined>
   getTermLabelFromGuid(setGuid: string, termGuid: string): Promise<string | undefined>
 }
+

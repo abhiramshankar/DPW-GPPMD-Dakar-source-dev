@@ -10,3 +10,4 @@ const useSelectedResultStore = create<ISelectedResultState>()((set) => ({
   setSelectedItem: (item) => set({ selectedItem: item })
 }));
 export default useSelectedResultStore;
+

@@ -157,3 +157,4 @@ export default class DmsPortalWebPart extends BaseClientSideWebPart<IDmsPortalWe
     };
   }
 }
+

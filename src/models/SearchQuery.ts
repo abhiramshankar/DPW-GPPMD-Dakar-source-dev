@@ -5,3 +5,4 @@ export type TSearchQuery = {
   refinementFilters: string[];
   sortList: ISort[];
 };
+

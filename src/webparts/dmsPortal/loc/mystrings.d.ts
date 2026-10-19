@@ -18,3 +18,4 @@ declare module "DmsPortalWebPartStrings" {
   const strings: IDmsPortalWebPartStrings;
   export = strings;
 }
+

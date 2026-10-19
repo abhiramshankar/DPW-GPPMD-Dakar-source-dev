@@ -27,3 +27,4 @@ export default function SubmissionDialogProgressItem({title, status}: Submission
     </div>
   )
 }
+

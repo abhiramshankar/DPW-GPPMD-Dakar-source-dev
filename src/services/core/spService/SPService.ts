@@ -21,7 +21,7 @@ import { HSEStats } from "@src/models/HSEStats";
 import { NewsArticle } from "@src/models/NewsArticle";
 import { ProgressAgainstMilestones } from "@src/models/ProgressAgainstMilestones";
 import { WorksProgress } from "@src/models/WorksProgress";
-import { HealthAndSafety } from "@src/models/HealthAndSafety";
+import { HealthAndSafety } from "@src/models/HealthandSafety";
 import { Quality } from "@src/models/Quality";
 import { Process } from "@src/models/Process";
 

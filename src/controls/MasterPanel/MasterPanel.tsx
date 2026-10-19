@@ -11,7 +11,7 @@ import WebcamPane from '@src/controls/Showcase - Webcam/ShowcaseWebcam';
 import ProcessPane from '../Process/Process';
 import EnvironmentalPane from '../Environmental/Environmental';
 import QualityPane from '../Quality/Quality';
-import HealthAndSafetyPane from '../HealthAndSafety/HealthAndSafety';
+import HealthAndSafetyPane from "@src/models/HealthandSafety';
 
 interface IMasterPanelProps {
   panelType: string;
@@ -81,3 +81,4 @@ const MasterPanel: React.FC<IMasterPanelProps> = ({
 };
 
 export default MasterPanel;
+

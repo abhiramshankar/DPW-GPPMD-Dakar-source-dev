@@ -18,3 +18,4 @@ export function fmtTaxonomy(term: string): string {
   const formattedTerms = cleanedTerms.join(", ");
   return formattedTerms;
 }
+

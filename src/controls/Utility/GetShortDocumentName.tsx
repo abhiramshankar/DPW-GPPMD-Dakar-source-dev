@@ -9,3 +9,4 @@ const GetShortDocumentName = (document_name: string) => {
   return noSuffix;
 };
 export default GetShortDocumentName;
+

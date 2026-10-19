@@ -5,3 +5,4 @@ export type Quality = {
   keyDate: Date;
   status: Status;
 };
+

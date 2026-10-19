@@ -25,3 +25,4 @@ export type DocumentReview = {
   cr_actioned_count: number;
   cr_total_count: number;
 };
+

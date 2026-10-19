@@ -6,3 +6,4 @@ export type Process = {
   progressPercentage: string;
   status: string;
 };
+

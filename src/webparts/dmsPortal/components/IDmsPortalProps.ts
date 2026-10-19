@@ -10,3 +10,4 @@ export interface IDmsPortalProps {
   livestreamURL: string;
   livestreamImageURL: string;
 }
+

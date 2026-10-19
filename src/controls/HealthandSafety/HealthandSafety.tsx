@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from '@src/controls/HealthAndSafety/HealthAndSafety.module.scss';
+import styles from "@src/models/HealthandSafety.module.scss';
 import useSPService from '@src/hooks/SharePoint/useSPService';
 import { useEffect, useState } from 'react';
-import { HealthAndSafety } from '@src/models/HealthAndSafety';
+import { HealthAndSafety } from "@src/models/HealthandSafety';
 import fmtAmounts from '@src/helpers/FormatAmounts';
 import LoadingSpinner from '@src/controls/LoadingSpinner/LoadingSpinner';
 import Error from '@src/controls/Error/Error';

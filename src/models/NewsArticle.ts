@@ -4,3 +4,4 @@ export type NewsArticle = {
   description: string;
   articleURL: string;
 };
+

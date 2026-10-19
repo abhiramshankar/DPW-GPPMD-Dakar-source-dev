@@ -7,3 +7,4 @@ const fmtPersonResponse = (person: string) => {
   };
 };
 export default fmtPersonResponse;
+

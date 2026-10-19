@@ -24,3 +24,4 @@ export const initialNewDocument: NewDocument = {
   business: [],
   scope: [],
 };
+

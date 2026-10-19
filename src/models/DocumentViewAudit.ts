@@ -19,3 +19,4 @@ export type DocumentViewAudit = {
   customer: string;
   published_date: Date;
 };
+

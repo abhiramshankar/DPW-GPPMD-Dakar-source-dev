@@ -10,3 +10,4 @@ export const getDmsPortalMainNavigationOptions = (modules: Modules, isController
   const navItems: IDmsPortalNavigationItem[] = [];
   return navItems;
 };
+

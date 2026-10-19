@@ -9,3 +9,4 @@ export type ControllerSummaryCounts = {
   outstanding_approvals: number;
   outstanding_document_reviews: number;
 };
+

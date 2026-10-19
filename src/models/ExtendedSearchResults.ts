@@ -16,3 +16,4 @@ export type ExtendedSearchResults = ISearchResult & {
   Modified: string;
   EditorOWSUSER: string;
 };
+

@@ -22,3 +22,4 @@ export type TermSet = {
   id: string;
   terms: Term[];
 };
+
