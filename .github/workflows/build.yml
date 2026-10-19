@@ -37,15 +37,34 @@ jobs:
 
     - name: Check build output
       run: |
+        Write-Host "=== Checking Build Directories ==="
+        Write-Host "Current working directory: $(Get-Location)"
+        Write-Host ""
+        Write-Host "=== Top-level directory contents ==="
+        Get-ChildItem -Path . -Force | Format-Table Name, Mode
+        Write-Host ""
         Write-Host "=== Checking lib/ directory ==="
         if (Test-Path lib) {
           Write-Host "✓ lib/ directory exists"
-          Write-Host "Contents:"
-          Get-ChildItem lib -Recurse | Select-Object -First 30 | Format-Table Name
+          Write-Host "File count: $(Get-ChildItem lib -Recurse | Measure-Object | Select-Object -ExpandProperty Count)"
         } else {
-          Write-Host "✗ ERROR: lib/ directory not found - build may have failed"
-          Write-Host "Current directory contents:"
-          Get-ChildItem -Recurse | Select-Object -First 50 | Format-Table FullName
+          Write-Host "✗ lib/ directory does NOT exist"
+        }
+        Write-Host ""
+        Write-Host "=== Checking dist/ directory ==="
+        if (Test-Path dist) {
+          Write-Host "✓ dist/ directory exists"
+          Get-ChildItem dist -Recurse | Format-Table FullName
+        } else {
+          Write-Host "✗ dist/ directory does NOT exist"
+        }
+        Write-Host ""
+        Write-Host "=== Checking temp/ directory ==="
+        if (Test-Path temp) {
+          Write-Host "✓ temp/ directory exists"
+          Get-ChildItem temp -Recurse | Format-Table FullName
+        } else {
+          Write-Host "✗ temp/ directory does NOT exist"
         }
 
     - name: Run gulp package-solution directly
@@ -55,11 +74,18 @@ jobs:
       run: |
         Write-Host "=== Checking solution/ directory ==="
         if (Test-Path solution) {
-          Write-Host "✓ solution/ directory exists"
+          Write-Host "✓ solution/ directory EXISTS"
+          Write-Host ""
           Write-Host "Contents:"
-          Get-ChildItem solution -Recurse | Format-Table FullName
+          Get-ChildItem solution -Recurse -Force | Format-Table FullName, Length
+          Write-Host ""
+          Write-Host "Looking for .sppkg files:"
+          Get-ChildItem solution -Recurse -Filter "*.sppkg" | Format-Table FullName
         } else {
-          Write-Host "✗ ERROR: solution/ directory not found"
+          Write-Host "✗ solution/ directory DOES NOT EXIST"
+          Write-Host ""
+          Write-Host "Searching entire workspace for .sppkg files:"
+          Get-ChildItem -Recurse -Filter "*.sppkg" -ErrorAction SilentlyContinue | Format-Table FullName
         }
 
     - name: Package solution
